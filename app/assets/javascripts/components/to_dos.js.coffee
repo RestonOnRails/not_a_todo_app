@@ -1,4 +1,8 @@
 @ToDos = React.createClass
+  getInitialState: ->
+    todos: @props.data
+  getDefaultProps: ->
+    todos: []
   render: ->
     React.DOM.div
       className: 'todos'
