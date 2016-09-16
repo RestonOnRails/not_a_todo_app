@@ -3,12 +3,17 @@
     todos: @props.data
   getDefaultProps: ->
     todos: []
+  addToDo: (todo) ->
+    todos = @state.todos.slice()
+    todos.push todo
+    @setState todos: todos
   render: ->
     React.DOM.div
       className: 'todos'
       React.DOM.h1
         className: 'title'
         'Not To Do'
-      React.DOM.ul null
+      React.createElement ToDoForm, handleNewToDo: @addToDo
+      React.DOM.div null
         for todo in @state.todos
           React.createElement ToDo, key: todo.id, todo: todo

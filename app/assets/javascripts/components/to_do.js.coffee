@@ -1,3 +1,3 @@
 @ToDo = React.createClass
   render: ->
-    React.DOM.li null, @props.todo.item
+    React.DOM.div null, @props.todo.item
