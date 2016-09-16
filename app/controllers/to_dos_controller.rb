@@ -7,9 +7,9 @@ class ToDosController < ApplicationController
     @todo = ToDo.new(todo_params)
 
     if @todo.save
-      render json: @record
+      render json: @todo
     else
-      render json: @record.errors, status: :unprocessable_entity
+      render json: @todo.errors, status: :unprocessable_entity
     end
   end
 

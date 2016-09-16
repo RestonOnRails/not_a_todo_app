@@ -14,6 +14,6 @@
         className: 'title'
         'Not To Do'
       React.createElement ToDoForm, handleNewToDo: @addToDo
-      React.DOM.div null
+      React.DOM.div null,
         for todo in @state.todos
-          React.createElement ToDo, key: todo.id, todo: todo
+          React.createElement ToDo, todo: todo, key: todo.id

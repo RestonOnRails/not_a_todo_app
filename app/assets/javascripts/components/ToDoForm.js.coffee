@@ -8,9 +8,9 @@
     @state.item
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '', { todo: @state}, (data) =>
-      @props.handleNewToDo data
-      @setState @getInitialState()
+    $.post '', { todo: @state }, (data) =>
+        @props.handleNewToDo data
+        @setState @getInitialState()
       , 'JSON'
   render: ->
     React.DOM.form
@@ -28,6 +28,7 @@
         React.DOM.input
           type: 'hidden'
           className: 'form-control'
+          name: 'complete'
           value: @state.complete = false
           onChange: @handleChange
         React.DOM.button
