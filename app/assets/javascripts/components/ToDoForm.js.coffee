@@ -14,22 +14,16 @@
       , 'JSON'
   render: ->
     React.DOM.form
-      className: 'form-inline'
+      className: 'form-inline form-style'
       onSubmit: @handleSubmit
       React.DOM.div
         className: 'form-group'
         React.DOM.input
           type: 'text'
           className: 'form-control'
-          placeholder: 'New thing not to do'
+          placeholder: 'Add a new item'
           name: 'item'
           value: @state.item
-          onChange: @handleChange
-        React.DOM.input
-          type: 'hidden'
-          className: 'form-control'
-          name: 'complete'
-          value: @state.complete = false
           onChange: @handleChange
         React.DOM.button
           type: 'submit'

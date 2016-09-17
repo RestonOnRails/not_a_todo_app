@@ -22,6 +22,6 @@ class ToDosController < ApplicationController
   private
 
   def todo_params
-    params.require(:todo).permit(:item, :complete)
+    params.require(:todo).permit(:item)
   end
 end
