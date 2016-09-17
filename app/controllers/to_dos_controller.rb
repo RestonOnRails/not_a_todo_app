@@ -13,6 +13,12 @@ class ToDosController < ApplicationController
     end
   end
 
+  def destroy
+    @todo = ToDo.find(params[:id])
+    @todo.destroy
+    head :no_content
+  end
+
   private
 
   def todo_params
